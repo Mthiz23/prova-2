@@ -17,7 +17,7 @@ class guerreiro extends personagem {
         
     }
     atacar(algo){
-        let ataque = 20;
+        let ataque = 30;
         console.log("guerreiro atacou");
         algo.vida -= ataque;
         if (algo.vida <=0) {
@@ -32,11 +32,21 @@ class mago extends personagem {
         super(vida, forca, energia, tipo);
         
     }
-    
+     regenerar (cura){
+        let regenerar = 20;
+        console.log ("mago se regenerou")
+        cura.vida += regenerar;
+        console.log (`mago possui ${this.vida}`)
+    }
 }
 class arqueiro extends personagem {
     constructor(vida, forca, energia, tipo){
         super(vida, forca, energia, tipo);
         
+    } defender (recuperou){
+        let defender = 10;
+        console.log ("arqueiro se defendeu")
+        recuperou.vida += defender;
+        console.log (`arqueiro recuperou ${this.vida}`)
     }
 }
