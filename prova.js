@@ -8,6 +8,8 @@ class personagem {
         this.energia = tipo;
     }
 }
+let p1 = new personagem (100, 50, 50, normal)
+
 class guerreiro extends personagem {
     constructor(vida, forca, energia, tipo){
         super(vida);
