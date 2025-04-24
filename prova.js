@@ -1,11 +1,27 @@
 const canvas = document.getElementById("jogo2d");
 
 class personagem {
+    #vida = valor1;
+    #forca = valor2;
+    #energia = valor3;
+    #tipo = sla;
+
     constructor(vida, forca, energia, tipo) {
-        this.vida = vida;
-        this. forca = forca;
-        this.energia = energia;
-        this.energia = tipo;
+        this.#vida = vida;
+        this.#forca = forca;
+        this.#energia = energia;
+        this.#tipo = tipo;
+    } get pvd (){
+        return this.#vida, 
+        this.#forca,
+        this.energia,
+        this.tipo ; 
+    }
+    set novopvd (valornovo){
+        this.#vida = novo, 
+        this.#forca = novo,
+        this.energia = novo,
+        this.tipo= novo; 
     }
 }
 let p1 = new personagem (100, 50, 50, comum)
@@ -72,4 +88,4 @@ class arqueiro extends personagem {
             console.log("proximo turno")
         }
     }
-}
+} 
